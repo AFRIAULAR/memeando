@@ -48,25 +48,40 @@ textColorSelect.addEventListener('change', () => {
 downloadButton.addEventListener('click', () => {
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
-    canvas.width = 100;
-    canvas.height = 100;
+    const image = new Image();
 
-    context.drawImage(memeImage, 0, 0);
+    image.onload = () => {
+        const aspectRatio = image.width / image.height;
+        const maxWidth = window.innerWidth; 
+        const maxHeight = window.innerHeight; 
+        
+        if (aspectRatio > 1) {
+            canvas.width = maxWidth;
+            canvas.height = maxWidth / aspectRatio;
+        } else {
+            canvas.height = maxHeight;
+            canvas.width = maxHeight * aspectRatio;
+        }
 
-    context.font = `${fontSizeInput.value}px ${fontFamilySelect.value}`;
-    context.fillStyle = textColorSelect.value;
-    context.textAlign = 'center';
-    context.fillText(topText.value.toUpperCase(), canvas.width / 2, 40);
+        context.drawImage(image, 0, 0, canvas.width, canvas.height);
 
-    context.font = `${fontSizeInput.value}px ${fontFamilySelect.value}`;
-    context.fillStyle = textColorSelect.value;
-    context.textAlign = 'center';
-    context.fillText(bottomText.value.toUpperCase(), canvas.width / 2, canvas.height - 20);
+        context.font = `${fontSizeInput.value}px ${fontFamilySelect.value}`;
+        context.fillStyle = textColorSelect.value;
+        context.textAlign = 'center';
+        context.fillText(topText.value.toUpperCase(), canvas.width / 2, 40);
 
-    const link = document.createElement('a');
-    link.download = 'meme.png';
-    link.href = canvas.toDataURL('image/png');
-    link.click();
+        context.font = `${fontSizeInput.value}px ${fontFamilySelect.value}`;
+        context.fillStyle = textColorSelect.value;
+        context.textAlign = 'center';
+        context.fillText(bottomText.value.toUpperCase(), canvas.width / 2, canvas.height - 20);
+
+        const link = document.createElement('a');
+        link.download = 'meme.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    };
+
+    image.src = memeImage.src;
 });
 
 themeToggle.addEventListener('click', () => {
