@@ -48,8 +48,8 @@ textColorSelect.addEventListener('change', () => {
 downloadButton.addEventListener('click', () => {
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
-    canvas.width = memeImage.width;
-    canvas.height = memeImage.height;
+    canvas.width = 500;
+    canvas.height = 500;
 
     context.drawImage(memeImage, 0, 0);
 
