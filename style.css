@@ -1,0 +1,203 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  margin: 0;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #AF6AF0;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #cfa4f6;
+}
+
+.aside-container {
+  background-color: #f1f1f1;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode header {
+  background-color: #222;
+}
+
+.dark-mode .aside-container {
+  background-color: #222;
+}
+
+/* Estilos del editor de memes */
+.meme-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.meme-container img {
+  width: 100%;
+  height: auto;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-input {
+  margin-bottom: 10px;
+}
+
+.top-text, .bottom-text {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.top-text input,.bottom-text input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.controls input[type="file"] {
+  margin-right: 10px;
+}
+
+.filter-section {
+  margin-top: 20px;
+}
+
+.filter-control {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.filter-control label {
+  margin-right: 10px;
+}
+
+.filter-control input[type="range"] {
+  flex-grow: 1;
+}
+
+.reset-button {
+  display: block;
+  margin-top: 10px;
+}
+
+.text-section h3, .filter-section h3 {
+  margin-top: 0;
+}
+
+.text-control {
+  margin-bottom: 10px;
+}
+
+.text-control label {
+  margin-right: 10px;
+}
+
+.text-control select, .text-control input[type="number"] {
+  padding: 8px;
+  font-size: 16px;
+}
+.text-input {
+  margin-bottom: 10px;
+}
+
+.text-input label {
+  margin-right: 10px;
+}
+
+.text-input select, .text-input input[type="range"] {
+  padding: 8px;
+  font-size: 16px;
+}
+.text-control select {
+  padding: 8px;
+  font-size: 16px;
+}
+
+
+/* CAMBIAR TEMA */
+.theme-switch {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 34px;
+}
+.theme-switch input[type="checkbox"] {
+  display: none;
+}
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+input[type="checkbox"]:checked + .slider {
+  background-color: #AF6AF0;
+}
+input[type="checkbox"]:checked + .slider:before {
+  transform: translateX(26px);
+}

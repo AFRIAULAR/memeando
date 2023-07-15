@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Memes</title>
+    <link rel="stylesheet" href="/memeando/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>MEMEANDO!</h1>
+        <label class="theme-switch" for="themeToggle">
+            <input type="checkbox" id="themeToggle">
+            <span class="slider"></span>
+        </label>
+    </header>
+
+    <div class="container">
+        <div class="meme-container">
+            <div class="text-container">
+                <input type="text" id="topText" placeholder="Texto superior">
+                <div class="image-wrapper">
+                    <img id="memeImage" src="/memeando/palaBye.jpg" alt="Meme" class="memeImg">
+                    <p id="imagePlaceholder">Inserta la imagen acá debajo para combatir la fobia a la pala</p>
+                    <input type="file" id="imageInput">
+                                      
+                </div>
+                <input type="text" id="bottomText" placeholder="Texto inferior">
+            </div>
+        </div>
+
+        <div id="memeText">
+            <div class="text-input">
+                <label for="fontFamily">Tipo de Fuente:</label>
+                <select id="fontFamily">
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+            </div>
+            <div class="text-input">
+                <label for="fontSize">Tamaño de Fuente:</label>
+                <input type="number" id="fontSizeInput" min="10" max="100" value="30">
+            </div>
+            <div class="text-input">
+                <label for="textColorSelect">Color de Texto</label>
+                <input type="color" id="textColorSelect">
+            </div>
+
+        </div>
+        <div class="controls">
+           
+            <button id="downloadButton">Descargar Meme</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
