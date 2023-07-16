@@ -1,9 +1,7 @@
 # Editor de Memes - README
 
 Este proyecto es un editor de memes que te permite agregar texto personalizado a una imagen y descargar el meme resultante. Puedes ajustar el texto superior e inferior, elegir la fuente, el tamaño de letra y el color del texto. También puedes cambiar entre el modo claro y oscuro.
-<div align="center">
-  <img src="/memeando/img/vistaPreviaMemeando.png" alt="Vista previa">
-</div>
+
 
 ## Características principales
 
@@ -26,6 +24,9 @@ Este proyecto es un editor de memes que te permite agregar texto personalizado a
 7. Selecciona el color del texto utilizando el selector de color.
 8. Haz clic en el botón "Descargar Meme" para descargar el meme resultante en formato PNG.
 9. Para cambiar entre el modo claro y oscuro, haz clic en el interruptor de tema en la esquina superior derecha.
+
+## También puedes probarlo ahora mismo siguiendo el link:
+[Ver el proyecto en vivo](https://afriaular.github.io/memeando/)
 
 ## Ajuste responsivo
 
